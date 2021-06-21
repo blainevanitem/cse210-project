@@ -1,6 +1,5 @@
 import os
-
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 800
-SCREEN_TITLE = "Welcome to Pokemon"
-
+BACKGROUNG_IMAGE = "pokemon\images\example.png"
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 1000
+SCREEN_TITLE = "Welcome to Pokemon!"
