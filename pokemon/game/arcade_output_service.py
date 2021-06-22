@@ -47,3 +47,6 @@ class ArcadeOutputService:
     def flush_buffer(self):
         """Renders the screen.""" 
         pass
+
+    def execute(self):
+        pass

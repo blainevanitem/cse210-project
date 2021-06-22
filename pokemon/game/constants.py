@@ -1,5 +1,15 @@
 import os
-BACKGROUNG_IMAGE = "pokemon\images\example.png"
+
+BACKGROUNG_IMAGE = "images/example.png"
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 1000
 SCREEN_TITLE = "Welcome to Pokemon!"
+
+PLAYER_MOVEMENT_SPEED = 25
+
+PLAYER_IMAGE = "pokemon/images/trainer_sprite.png"
+
+CHARACTER_SCALING = 0.09
+
+PLAYER_START_X = SCREEN_WIDTH/2
+PLAYER_START_Y = SCREEN_HEIGHT/2
