@@ -29,11 +29,19 @@ class DrawActorsAction(Action):
         """
         self._output_service.clear_screen()
 
-        building = cast["pokecenter"]
-        self._output_service.draw_actor(building)
+        pokecenter = cast["pokecenter"]
+        self._output_service.draw_actor(pokecenter)
+
+        pokemart = cast["pokemart"]
+        self._output_service.draw_actor(pokemart)
+
+        pokelab = cast["pokelab"]
+        self._output_service.draw_actor(pokelab)
 
         player = cast["player"][0] # there's only one
         self._output_service.draw_actor(player)
+
+
 
         self._output_service.flush_buffer()
 

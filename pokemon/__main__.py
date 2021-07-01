@@ -10,7 +10,9 @@ from game.arcade_output_service import ArcadeOutputService
 
 from game.player import Player
 from game.pokecenter import PokeCenter
+from game.pokemart import PokeMart
 from game.director import Director
+from game.pokelab import PokeLab
 import arcade
 
 def main():
@@ -22,6 +24,11 @@ def main():
     cast["player"] = [player]
     pokecenter = PokeCenter()
     cast["pokecenter"] = pokecenter
+    pokemart = PokeMart()
+    cast["pokemart"] = pokemart
+    pokelab = PokeLab()
+    cast["pokelab"] = pokelab
+    
     
     # create the script {key: tag, value: list}
     script = {}

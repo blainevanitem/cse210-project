@@ -17,10 +17,19 @@ PLAYER_LEFT = "images/trainer_left.png"
 STARTER_TOWN = "images/pallet_town.png"
 CHARACTER_SCALING = 3
 
-POKEMON_CENTER = "images/pokemon_center.png"
-BUILDING_SCALING = 0.6
+POKEMON_CENTER = "images/pokemon_center2.png"
+BUILDING_SCALING = 3
 POKEMON_START_X = 750
 POKEMON_START_Y = 350
+
+POKELAB_START_X = 250
+POKELAB_START_Y = 750
+POKEMON_LAB = "images/professorlab.png"
+
+POKEMON_MARKET = "images/pokemart.png"
+
+POKEMART_START_X = 250
+POKEMART_START_Y = 350
 
 STARTER_MUSIC = "images/pallet_town_music.mp3"
 COLLISION_SOUND = "images/bumpintowall.mp3"
