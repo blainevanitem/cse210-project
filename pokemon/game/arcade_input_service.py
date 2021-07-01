@@ -1,4 +1,5 @@
 import sys
+from game.point import Point
 
 import arcade
 

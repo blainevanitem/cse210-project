@@ -1,15 +1,26 @@
 import os
 
-BACKGROUNG_IMAGE = "images/example.png"
-SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 1000
 SCREEN_TITLE = "Welcome to Pokemon!"
+MAX_X = 1000
+MAX_Y = 1000
 
-PLAYER_MOVEMENT_SPEED = 25
+PADDLE_Y = 25
 
-PLAYER_IMAGE = "pokemon/images/trainer_sprite.png"
+PLAYER_MOVE_SCALE = 3
 
-CHARACTER_SCALING = 0.09
+PADDLE_IMAGE = "images/trainer_sprite.png"
 
-PLAYER_START_X = SCREEN_WIDTH/2
-PLAYER_START_Y = SCREEN_HEIGHT/2
+PLAYER_IMAGE = "images/trainer_sprite.png"
+PLAYER_BACK = "images/player_back.png"
+PLAYER_RIGHT = "images/trainer_right.png"
+PLAYER_LEFT = "images/trainer_left.png"
+STARTER_TOWN = "images/pallet_town.png"
+CHARACTER_SCALING = 3
+
+POKEMON_CENTER = "images/pokemon_center.png"
+BUILDING_SCALING = 0.6
+POKEMON_START_X = 750
+POKEMON_START_Y = 350
+
+STARTER_MUSIC = "images/pallet_town_music.mp3"
+COLLISION_SOUND = "images/bumpintowall.mp3"
