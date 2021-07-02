@@ -33,3 +33,6 @@ POKEMART_START_Y = 350
 
 STARTER_MUSIC = "images/pallet_town_music.mp3"
 COLLISION_SOUND = "images/bumpintowall.mp3"
+
+BIG_TREE = "images/tree.png"
+TREE_SCALE = 1.5

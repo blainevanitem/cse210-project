@@ -13,6 +13,8 @@ from game.pokecenter import PokeCenter
 from game.pokemart import PokeMart
 from game.director import Director
 from game.pokelab import PokeLab
+from game.tree import Tree
+
 import arcade
 
 def main():
@@ -28,6 +30,32 @@ def main():
     cast["pokemart"] = pokemart
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
+    
+    cast["trees"] = []
+
+    for y in range(840,0,-45):
+        tree = Tree(810,y)
+        cast["trees"].append(tree)
+
+    for y in range(840,0,-45):
+        tree = Tree(770,y)
+        cast["trees"].append(tree)
+
+    for x in range(5,850,45):
+        tree = Tree(x,30)
+        cast["trees"].append(tree)
+    
+    for y in range(850,0,-46):
+        tree = Tree(4,y)
+        cast["trees"].append(tree)
+
+    for y in range(850,0,-46):
+        tree = Tree(48,y)
+        cast["trees"].append(tree)
+
+    # for y in range(850,0,-45):
+    #     tree = Tree(795,y)
+    #     cast["trees"].append(tree)
     
     
     # create the script {key: tag, value: list}
