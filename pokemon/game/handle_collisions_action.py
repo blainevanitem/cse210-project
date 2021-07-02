@@ -25,21 +25,22 @@ class HandleCollisionsAction(Action):
         pokecenter = cast["pokecenter"]
         pokemart = cast["pokemart"]
         pokelab = cast["pokelab"]
+        trees = cast["trees"]
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
         if arcade.check_for_collision(player,pokecenter):
-            arcade.play_sound(wall_hit_sound,volume=0.05)
-            if player.center_x < pokecenter.center_x:
-                player.center_x -= 2
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            if player.center_x < pokecenter.center_x or player.center_y < pokecenter.center_y:
+                player.center_x -= 5
                 player.change_x = 0
             elif player.center_x > pokecenter.center_x:
-                player.center_x += 2
+                player.center_x += 5
                 player.change_x = 0
-            elif player.center_y < pokecenter.center_y:
-                player.center_y -= 2
+            elif player.center_y < pokecenter.center_y or player.center_y > pokecenter.center_y:
+                player.center_y -= 5
                 player.change_y = 0
             elif player.center_y > pokecenter.center_y:
-                player.center_y += 2
+                player.center_y += 5
                 player.change_y = 0
 
         # if arcade.check_for_collision(player,pokecenter) and self.is_touching == False:
