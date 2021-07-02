@@ -5,7 +5,7 @@ class Director(arcade.Window):
     def __init__(self, cast, script, input_service):
         """Initialize the game
         """
-        super().__init__(constants.MAX_X, constants.MAX_Y, "Pokemon Game")
+        super().__init__(constants.MAX_X, constants.MAX_Y, constants.SCREEN_TITLE)
 
         self._cast = cast
         self._script = script
