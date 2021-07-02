@@ -45,7 +45,7 @@ def main():
     script["input"] = [control_actors_action]
     script["update"] = [move_actors_action, handle_collisions_action]
     script["output"] = [draw_actors_action]
-
+    
     # start the game
     director = Director(cast, script, input_service)
     director.setup()

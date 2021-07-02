@@ -6,7 +6,7 @@ class Director(arcade.Window):
         """Initialize the game
         """
         super().__init__(constants.MAX_X, constants.MAX_Y, constants.SCREEN_TITLE)
-
+        self.is_touching =False
         self._cast = cast
         self._script = script
         self._input_service = input_service

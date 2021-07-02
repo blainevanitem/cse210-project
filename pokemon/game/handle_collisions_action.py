@@ -10,6 +10,9 @@ class HandleCollisionsAction(Action):
     Stereotype:
         Controller
     """
+    def __init__(self):
+        self.is_touching = False
+
 
     def execute(self, cast):
         """Executes the action using the given actors.
@@ -18,7 +21,7 @@ class HandleCollisionsAction(Action):
             cast (dict): The game actors {key: tag, value: list}.
         """
 
-        is_touching = False
+        
 
         player = cast["player"][0]
         pokecenter = cast["pokecenter"]
@@ -27,22 +30,29 @@ class HandleCollisionsAction(Action):
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
 
-        if arcade.check_for_collision(player,pokecenter) and is_touching == False:
+        if arcade.check_for_collision(player,pokecenter) and self.is_touching == False:
             player.change_x = 0
             player.change_y = 0
             arcade.play_sound(wall_hit_sound,volume=0.05)
-            is_touching = True
+            self.is_touching = True
+
+        elif arcade.check_for_collision(player,pokecenter) == False and self.is_touching == True:
+            arcade.play_sound(wall_hit_sound,volume=0.05)
+            self.is_touching = False
         
-        if arcade.check_for_collision(player,pokemart) and is_touching == False:
+        if arcade.check_for_collision(player,pokemart) and self.is_touching == False:
             player.change_x = 0
             player.change_y = 0
             arcade.play_sound(wall_hit_sound,volume=0.05)
-            is_touching = True
+            self.is_touching = True
+
         
-        if arcade.check_for_collision(player,pokelab) and is_touching == False:
+        if arcade.check_for_collision(player,pokelab) and self.is_touching == False:
             player.change_x = 0
             player.change_y = 0
             arcade.play_sound(wall_hit_sound,volume=0.05)
-            is_touching = True
+            self.is_touching = True
+
+
 
 
