@@ -12,8 +12,7 @@ class Director(arcade.Window):
         self._input_service = input_service
 
     def setup(self):
-        arcade.set_background_color(arcade.color.WHEAT)
-        
+        arcade.set_background_color(arcade.color.WHEAT)        
 
     def on_update(self, delta_time):
         self._cue_action("update")
@@ -37,3 +36,4 @@ class Director(arcade.Window):
         """ 
         for action in self._script[tag]:
             action.execute(self._cast)
+

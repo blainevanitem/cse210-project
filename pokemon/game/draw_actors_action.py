@@ -41,6 +41,10 @@ class DrawActorsAction(Action):
         player = cast["player"][0] # there's only one
         self._output_service.draw_actor(player)
 
+        trees = cast["trees"]
+        for tree in trees:
+            self._output_service.draw_actor(tree)
+
 
 
         self._output_service.flush_buffer()
