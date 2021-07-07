@@ -15,6 +15,7 @@ from game.director import Director
 from game.pokelab import PokeLab
 from game.tree import Tree
 from game.bigrock import BigRock
+from game.pokeball import PokeBall
 
 import arcade
 
@@ -34,7 +35,10 @@ def main():
     
     cast["bigrocks"] = []
     cast["trees"] = []
+    cast["pokeballs"] = []
 
+    ball = PokeBall(100,100)
+    cast["pokeballs"].append(ball)
 
 
     for x in range(5,350,45):

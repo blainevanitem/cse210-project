@@ -49,6 +49,10 @@ class DrawActorsAction(Action):
         for rock in rocks:
             self._output_service.draw_actor(rock)
 
+        balls = cast["pokeballs"]
+        for ball in balls:
+            self._output_service.draw_actor(ball)
+
 
 
         self._output_service.flush_buffer()
