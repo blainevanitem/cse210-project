@@ -18,5 +18,7 @@ class Tree(arcade.Sprite):
         self.center_x = x
         self.center_y = y
 
+        self._hit_box_algorithm = "Simple"
+
 
 

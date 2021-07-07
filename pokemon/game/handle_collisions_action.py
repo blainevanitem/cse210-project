@@ -52,4 +52,72 @@ class HandleCollisionsAction(Action):
 
 
 
+        if arcade.check_for_collision(player,pokemart):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            if player.top > pokemart.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
 
+            elif player.bottom < pokemart.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > pokemart.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < pokemart.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+
+        if arcade.check_for_collision(player,pokelab):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            if player.top > pokelab.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.bottom < pokelab.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > pokelab.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < pokelab.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+        for tree in trees:
+            if arcade.check_for_collision(player,tree):
+                arcade.play_sound(wall_hit_sound,volume=0.5)
+                if player.top > tree.top:
+                    player.center_y += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.bottom < tree.bottom:
+                    player.center_y -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.right > tree.right:
+                    player.center_x += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.left < tree.left:
+                    player.center_x -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+            
+        
