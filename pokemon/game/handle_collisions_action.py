@@ -30,41 +30,25 @@ class HandleCollisionsAction(Action):
 
         if arcade.check_for_collision(player,pokecenter):
             arcade.play_sound(wall_hit_sound,volume=0.5)
-            if player.center_x < pokecenter.center_x:
-                player.center_x -= 5
+            if player.top > pokecenter.top:
+                player.center_y += 5
                 player.change_x = 0
-            elif player.center_x > pokecenter.center_x:
+                player.change_y = 0
+
+            elif player.bottom < pokecenter.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > pokecenter.right:
                 player.center_x += 5
                 player.change_x = 0
-            elif player.center_y < pokecenter.center_y:
-                player.center_y -= 5
-                player.change_y = 0
-            elif player.center_y > pokecenter.center_y:
-                player.center_y += 5
                 player.change_y = 0
 
-        # if arcade.check_for_collision(player,pokecenter) and self.is_touching == False:
-        #     player.change_x = 0
-        #     player.change_y = 0
-        #     arcade.play_sound(wall_hit_sound,volume=0.05)
-        #     self.is_touching = True
-
-        # elif arcade.check_for_collision(player,pokecenter) == False and self.is_touching == True:
-        #     arcade.play_sound(wall_hit_sound,volume=0.05)
-        #     self.is_touching = False
-        
-        # if arcade.check_for_collision(player,pokemart) and self.is_touching == False:
-        #     player.change_x = 0
-        #     player.change_y = 0
-        #     arcade.play_sound(wall_hit_sound,volume=0.05)
-        #     self.is_touching = True
-
-        
-        # if arcade.check_for_collision(player,pokelab) and self.is_touching == False:
-        #     player.change_x = 0
-        #     player.change_y = 0
-        #     arcade.play_sound(wall_hit_sound,volume=0.05)
-        #     self.is_touching = True
+            elif player.left < pokecenter.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
 
 
 

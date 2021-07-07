@@ -31,6 +31,7 @@ class DrawActorsAction(Action):
 
         pokecenter = cast["pokecenter"]
         self._output_service.draw_actor(pokecenter)
+        
 
         pokemart = cast["pokemart"]
         self._output_service.draw_actor(pokemart)

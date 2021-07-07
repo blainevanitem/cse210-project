@@ -18,4 +18,6 @@ class PokeCenter(arcade.Sprite):
         self.center_x = constants.POKEMON_START_X
         self.center_y = constants.POKEMON_START_Y
 
+        
+
 
