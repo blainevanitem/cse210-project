@@ -36,3 +36,5 @@ COLLISION_SOUND = "images/bumpintowall.mp3"
 
 BIG_TREE = "images/tree.png"
 TREE_SCALE = 1.5
+
+BIG_ROCK = "images/pokemon_rock.png"

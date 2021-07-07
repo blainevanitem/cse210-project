@@ -45,6 +45,10 @@ class DrawActorsAction(Action):
         for tree in trees:
             self._output_service.draw_actor(tree)
 
+        rocks = cast["bigrocks"]
+        for rock in rocks:
+            self._output_service.draw_actor(rock)
+
 
 
         self._output_service.flush_buffer()

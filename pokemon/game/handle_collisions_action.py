@@ -30,13 +30,13 @@ class HandleCollisionsAction(Action):
 
         if arcade.check_for_collision(player,pokecenter):
             arcade.play_sound(wall_hit_sound,volume=0.5)
-            if player.center_x < pokecenter.center_x or player.center_y < pokecenter.center_y:
+            if player.center_x < pokecenter.center_x:
                 player.center_x -= 5
                 player.change_x = 0
             elif player.center_x > pokecenter.center_x:
                 player.center_x += 5
                 player.change_x = 0
-            elif player.center_y < pokecenter.center_y or player.center_y > pokecenter.center_y:
+            elif player.center_y < pokecenter.center_y:
                 player.center_y -= 5
                 player.change_y = 0
             elif player.center_y > pokecenter.center_y:
