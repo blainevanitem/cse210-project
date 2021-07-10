@@ -19,6 +19,9 @@ class Tree(arcade.Sprite):
         self.center_y = y
 
         self._hit_box_algorithm = "Simple"
+        points = ((-15.0, -19.0), (-11.0, -23.0), (11.0, -23.0), (15.0, -19.0), (15.0, 0.0), (2.0, 0.0), (-2.0, 0.0), (-15.0, 0.0))
+        self.set_hit_box(points)
+        self.get_adjusted_hit_box()
 
 
 

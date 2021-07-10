@@ -72,11 +72,11 @@ def main():
         tree = Tree(x,30)
         cast["trees"].append(tree)
     
-    for y in range(850,0,-46):
+    for y in range(850,-50,-45):
         tree = Tree(4,y)
         cast["trees"].append(tree)
 
-    for y in range(850,0,-46):
+    for y in range(850,-50,-45):
         tree = Tree(48,y)
         cast["trees"].append(tree)
 

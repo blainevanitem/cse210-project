@@ -40,3 +40,5 @@ TREE_SCALE = 1.5
 BIG_ROCK = "images/pokemon_rock.png"
 
 POKEBALL = "images/pokeball.png"
+
+VIEWPORT_MARGIN = 40

@@ -18,6 +18,10 @@ class PokeCenter(arcade.Sprite):
         self.center_x = constants.POKEMON_START_X
         self.center_y = constants.POKEMON_START_Y
 
+        self._hit_box_algorithm = "Simple"
+        points = ((-40.0, -27.0), (-32.0, -35.0), (32.0, -35.0), (40.0, -27.0), (40.0, 26.0), (35.0, 26.0), (-35.0, 26.0), (-40.0, 26.0))
+        self.set_hit_box(points)
+        self.get_adjusted_hit_box()
         
 
 

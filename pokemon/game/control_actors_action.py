@@ -33,6 +33,7 @@ class ControlActorsAction(Action):
         
         if player.change_x > 0:
             player.texture = player.textures[2]
+            
         elif player.change_x < 0:
             player.texture = player.textures[3]
         elif player.change_y > 0:

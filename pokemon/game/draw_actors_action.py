@@ -29,6 +29,9 @@ class DrawActorsAction(Action):
         """
         self._output_service.clear_screen()
 
+        player = cast["player"][0] # there's only one
+        self._output_service.draw_actor(player)
+
         pokecenter = cast["pokecenter"]
         self._output_service.draw_actor(pokecenter)
         
@@ -39,8 +42,7 @@ class DrawActorsAction(Action):
         pokelab = cast["pokelab"]
         self._output_service.draw_actor(pokelab)
 
-        player = cast["player"][0] # there's only one
-        self._output_service.draw_actor(player)
+        
 
         trees = cast["trees"]
         for tree in trees:
@@ -53,6 +55,8 @@ class DrawActorsAction(Action):
         balls = cast["pokeballs"]
         for ball in balls:
             self._output_service.draw_actor(ball)
+
+        
 
 
 

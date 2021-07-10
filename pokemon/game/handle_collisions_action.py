@@ -26,10 +26,12 @@ class HandleCollisionsAction(Action):
         pokemart = cast["pokemart"]
         pokelab = cast["pokelab"]
         trees = cast["trees"]
+        rocks = cast["bigrocks"]
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
         if arcade.check_for_collision(player,pokecenter):
             arcade.play_sound(wall_hit_sound,volume=0.5)
+            print(player.hit_box)
             if player.top > pokecenter.top:
                 player.center_y += 5
                 player.change_x = 0
@@ -116,6 +118,29 @@ class HandleCollisionsAction(Action):
                     player.change_y = 0
 
                 elif player.left < tree.left:
+                    player.center_x -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+        for rock in rocks:
+            if arcade.check_for_collision(player,rock):
+                arcade.play_sound(wall_hit_sound,volume=0.5)
+                if player.top > rock.top:
+                    player.center_y += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.bottom < rock.bottom:
+                    player.center_y -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.right > rock.right:
+                    player.center_x += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.left < rock.left:
                     player.center_x -= 5
                     player.change_x = 0
                     player.change_y = 0
