@@ -52,6 +52,10 @@ class DrawActorsAction(Action):
         for rock in rocks:
             self._output_service.draw_actor(rock)
 
+        sidetrees = cast["treesides"]
+        for tree in sidetrees:
+            self._output_service.draw_actor(tree)
+
         balls = cast["pokeballs"]
         for ball in balls:
             self._output_service.draw_actor(ball)
