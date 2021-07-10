@@ -42,3 +42,5 @@ BIG_ROCK = "images/pokemon_rock.png"
 POKEBALL = "images/pokeball.png"
 
 VIEWPORT_MARGIN = 40
+
+TREE_SIDES = "images/treesides.png"

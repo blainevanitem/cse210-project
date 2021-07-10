@@ -16,6 +16,7 @@ from game.pokelab import PokeLab
 from game.tree import Tree
 from game.bigrock import BigRock
 from game.pokeball import PokeBall
+from game.treesides import TreeSides
 
 import arcade
 
@@ -40,6 +41,8 @@ def main():
     ball = PokeBall(100,100)
     cast["pokeballs"].append(ball)
 
+    
+
 
     for x in range(5,350,45):
         tree = Tree(x,800)
@@ -48,6 +51,9 @@ def main():
     for x in range(5,350,45):
         tree = Tree(x,760)
         cast["trees"].append(tree)
+    
+    lefttreeside = TreeSides(4,400)
+    cast["trees"].append(lefttreeside)
 
     for x in range(470,840,45):
         tree = Tree(x,800)
@@ -57,28 +63,25 @@ def main():
         tree = Tree(x,760)
         cast["trees"].append(tree)
 
-
-    for y in range(600,0,-45):
-        tree = Tree(810,y)
-        cast["trees"].append(tree)
-
+    # for y in range(600,0,-45):
+    #     tree = Tree(810,y)
+    #     cast["trees"].append(tree)
     
-    for y in range(600,0,-45):
-        tree = Tree(770,y)
-        cast["trees"].append(tree)
+    # for y in range(600,0,-45):
+    #     tree = Tree(770,y)
+    #     cast["trees"].append(tree)
 
-
-    for x in range(5,850,45):
-        tree = Tree(x,30)
+    for x in range(4,850,45):
+        tree = Tree(x,35)
         cast["trees"].append(tree)
     
-    for y in range(850,-50,-45):
-        tree = Tree(4,y)
-        cast["trees"].append(tree)
+    # for y in range(850,-50,-45):
+    #     tree = Tree(4,y)
+    #     cast["trees"].append(tree)
 
-    for y in range(850,-50,-45):
-        tree = Tree(48,y)
-        cast["trees"].append(tree)
+    # for y in range(850,-50,-45):
+    #     tree = Tree(48,y)
+    #     cast["trees"].append(tree)
 
     for x in range(800,650,-69):
         rock = BigRock(x,700)
