@@ -18,6 +18,8 @@ from game.bigrock import BigRock
 from game.pokeball import PokeBall
 from game.treesides import TreeSides
 from game.treehoriz import TreeHoriz
+from game.fountain import Fountain
+
 
 import arcade
 
@@ -34,6 +36,8 @@ def main():
     cast["pokemart"] = pokemart
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
+    fountain = Fountain()
+    cast["fountains"] = [fountain]
     
     cast["bigrocks"] = []
     cast["trees"] = []

@@ -9,12 +9,16 @@ class Director(arcade.Window):
         self._cast = cast
         self._script = script
         self._input_service = input_service
+        self.fountain = cast["fountains"]
 
     def setup(self):
         arcade.set_background_color(arcade.color.WHEAT)        
 
     def on_update(self, delta_time):
         self._cue_action("update")
+        for fountain in self.fountain:
+            fountain.update()
+        
 
     def on_draw(self):
         self._cue_action("output")
