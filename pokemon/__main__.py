@@ -37,11 +37,10 @@ def main():
     cast["bigrocks"] = []
     cast["trees"] = []
     cast["pokeballs"] = []
+    cast["treesides"] = []
 
     ball = PokeBall(100,100)
     cast["pokeballs"].append(ball)
-
-    
 
 
     for x in range(5,350,45):
@@ -51,9 +50,21 @@ def main():
     for x in range(5,350,45):
         tree = Tree(x,760)
         cast["trees"].append(tree)
+
     
     lefttreeside = TreeSides(4,400)
-    cast["trees"].append(lefttreeside)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(49,400)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(814,92)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(769,92)
+    cast["treesides"].append(lefttreeside)
+
+
 
     for x in range(470,840,45):
         tree = Tree(x,800)
@@ -72,7 +83,11 @@ def main():
     #     cast["trees"].append(tree)
 
     for x in range(4,850,45):
-        tree = Tree(x,35)
+        tree = Tree(x,40)
+        cast["trees"].append(tree)
+
+    for x in range(4,850,45):
+        tree = Tree(x,5)
         cast["trees"].append(tree)
     
     # for y in range(850,-50,-45):
