@@ -44,3 +44,4 @@ POKEBALL = "images/pokeball.png"
 VIEWPORT_MARGIN = 40
 
 TREE_SIDES = "images/treesides.png"
+TREE_HORIZ = "images/treehorizline.png"
