@@ -124,7 +124,7 @@ class HandleCollisionsAction(Action):
 
         for tree in trees:
             if arcade.check_for_collision(player,tree):
-                print(tree.hit_box)
+                
                 arcade.play_sound(wall_hit_sound,volume=0.5)
                 if player.top > tree.top:
                     player.center_y += 5

@@ -24,18 +24,6 @@ class Director(arcade.Window):
 
         changed = False
         
-        # Scroll left
-        left_boundary = self.view_left
-        if self.player_sprite.left < left_boundary:
-            self.view_left -= left_boundary - self.player_sprite.left
-            changed = True
-
-        # Scroll right
-        right_boundary = self.view_left + constants.MAX_X
-        if self.player_sprite.right > right_boundary:
-            self.view_left += self.player_sprite.right - right_boundary
-            changed = True
-        
         # Scroll up
         top_boundary = self.view_bottom + constants.MAX_Y - constants.TOP_VIEWPORT_MARGIN
         if self.player_sprite.top > top_boundary:
