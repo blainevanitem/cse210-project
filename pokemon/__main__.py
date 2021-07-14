@@ -36,13 +36,16 @@ def main():
     cast["pokemart"] = pokemart
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
-    fountain = Fountain()
-    cast["fountains"] = [fountain]
+    
     
     cast["bigrocks"] = []
     cast["trees"] = []
     cast["pokeballs"] = []
     cast["treesides"] = []
+    cast["fountains"] = []
+
+    fountain = Fountain(400,150)
+    cast["fountains"].append(fountain)
 
     ball = PokeBall(100,100)
     cast["pokeballs"].append(ball)
