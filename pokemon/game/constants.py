@@ -51,3 +51,6 @@ FOUNTAIN2 = "images/fountain2.png"
 FOUNTAIN3 = "images/fountain3.png"
 FOUNTAIN4 = "images/fountain4.png"
 FOUNTAIN5 = "images/fountain5.png"
+
+BOTTOM_VIEWPORT_MARGIN = 200
+TOP_VIEWPORT_MARGIN = 200
