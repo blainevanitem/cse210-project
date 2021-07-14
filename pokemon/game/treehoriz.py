@@ -19,6 +19,9 @@ class TreeHoriz(arcade.Sprite):
         self.center_y = y
 
         self._hit_box_algorithm = "None"
+        points = ((-195.0, -30.5), (-191.0, -34.5), (191.0, -34.5), (195.0, -30.5), (195.0, 21.5), (182.0, 21.5), (-182.0, 21.5), (-195.0, 21.5))
+        self.set_hit_box(points)
+        self.get_adjusted_hit_box()
 
 
 
