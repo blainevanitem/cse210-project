@@ -7,6 +7,7 @@ from game.handle_collisions_action import HandleCollisionsAction
 from game.move_actors_action import MoveActorsAction
 from game.arcade_input_service import ArcadeInputService
 from game.arcade_output_service import ArcadeOutputService
+from game.score import HandleCollectionsAction
 
 from game.player import Player
 from game.pokecenter import PokeCenter
@@ -48,6 +49,8 @@ def main():
     cast["fountains"].append(fountain)
 
     ball = PokeBall(100,100)
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(150,100)
     cast["pokeballs"].append(ball)
 
     tree = TreeHoriz(5,780)
@@ -92,11 +95,12 @@ def main():
     control_actors_action = ControlActorsAction(input_service)
     move_actors_action = MoveActorsAction()
     handle_collisions_action = HandleCollisionsAction()
+    handle_collections_action = HandleCollectionsAction()
     draw_actors_action = DrawActorsAction(output_service)
     
     
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action, handle_collisions_action]
+    script["update"] = [move_actors_action, handle_collisions_action,handle_collections_action]
     script["output"] = [draw_actors_action]
     
     # start the game

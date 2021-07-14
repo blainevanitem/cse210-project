@@ -61,9 +61,15 @@ class DrawActorsAction(Action):
         for tree in sidetrees:
             self._output_service.draw_actor(tree)
 
-        balls = cast["pokeballs"]
-        for ball in balls:
+        count = 0
+        try:
+            ball = cast["pokeballs"][count]
             self._output_service.draw_actor(ball)
+
+        except:
+            self._output_service.clear_screen()
+            arcade.start_render()
+            arcade.draw_text("You WIN", constants.MAX_X/2, constants.MAX_Y/2, arcade.color.AIR_FORCE_BLUE)
 
         
         
