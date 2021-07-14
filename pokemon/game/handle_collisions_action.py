@@ -28,6 +28,7 @@ class HandleCollisionsAction(Action):
         trees = cast["trees"]
         treesides = cast["treesides"]
         rocks = cast["bigrocks"]
+        fountains = cast["fountains"]
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
         if arcade.check_for_collision(player,pokecenter):
@@ -123,7 +124,7 @@ class HandleCollisionsAction(Action):
 
         for tree in trees:
             if arcade.check_for_collision(player,tree):
-                print(tree.hit_box)
+                
                 arcade.play_sound(wall_hit_sound,volume=0.5)
                 if player.top > tree.top:
                     player.center_y += 5
@@ -164,6 +165,29 @@ class HandleCollisionsAction(Action):
                     player.change_y = 0
 
                 elif player.left < rock.left:
+                    player.center_x -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+            
+        for fountain in fountains:
+            if arcade.check_for_collision(player,fountain):
+                arcade.play_sound(wall_hit_sound,volume=0.5)
+                if player.top > fountain.top:
+                    player.center_y += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.bottom < fountain.bottom:
+                    player.center_y -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.right > fountain.right:
+                    player.center_x += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.left < fountain.left:
                     player.center_x -= 5
                     player.change_x = 0
                     player.change_y = 0
