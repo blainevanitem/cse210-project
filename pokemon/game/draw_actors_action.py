@@ -59,6 +59,7 @@ class DrawActorsAction(Action):
         balls = cast["pokeballs"]
         for ball in balls:
             self._output_service.draw_actor(ball)
+            arcade.draw_text("Professor Oak thanks you for your help!", constants.MAX_X/2-250, constants.MAX_Y/2-50, arcade.color.BLUEBERRY,30)
 
         
 
