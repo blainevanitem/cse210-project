@@ -7,6 +7,7 @@ from game.handle_collisions_action import HandleCollisionsAction
 from game.move_actors_action import MoveActorsAction
 from game.arcade_input_service import ArcadeInputService
 from game.arcade_output_service import ArcadeOutputService
+from game.score import HandleCollectionsAction
 
 from game.player import Player
 from game.pokecenter import PokeCenter
@@ -17,6 +18,9 @@ from game.tree import Tree
 from game.bigrock import BigRock
 from game.pokeball import PokeBall
 from game.treesides import TreeSides
+from game.treehoriz import TreeHoriz
+from game.fountain import Fountain
+
 
 import arcade
 
@@ -34,13 +38,19 @@ def main():
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
     
+    
     cast["bigrocks"] = []
     cast["trees"] = []
     cast["pokeballs"] = []
     cast["treesides"] = []
+    cast["fountains"] = []
+
+    fountain = Fountain(400,150)
+    cast["fountains"].append(fountain)
 
     ball = PokeBall(80,80) #Bottom Left
     cast["pokeballs"].append(ball)
+
     ball = PokeBall(730,650) #Top Right rocks
     cast["pokeballs"].append(ball)
     ball = PokeBall(500,420)
@@ -52,14 +62,13 @@ def main():
     # ball = PokeBall(80, 850)
     # cast["pokeballs"].append(ball)
 
-    for x in range(5,350,45):
-        tree = Tree(x,800)
-        cast["trees"].append(tree)
 
-    for x in range(5,350,45):
-        tree = Tree(x,760)
-        cast["trees"].append(tree)
+    tree = TreeHoriz(5,780)
+    cast["trees"].append(tree)
 
+
+    tree = TreeHoriz(700,780)
+    cast["trees"].append(tree)
     
     lefttreeside = TreeSides(4,400)
     cast["treesides"].append(lefttreeside)
@@ -75,22 +84,6 @@ def main():
 
 
 
-    for x in range(470,840,45):
-        tree = Tree(x,800)
-        cast["trees"].append(tree)
-
-    for x in range(470,840,45):
-        tree = Tree(x,760)
-        cast["trees"].append(tree)
-
-    # for y in range(600,0,-45):
-    #     tree = Tree(810,y)
-    #     cast["trees"].append(tree)
-    
-    # for y in range(600,0,-45):
-    #     tree = Tree(770,y)
-    #     cast["trees"].append(tree)
-
     for x in range(4,850,45):
         tree = Tree(x,40)
         cast["trees"].append(tree)
@@ -98,14 +91,6 @@ def main():
     for x in range(4,850,45):
         tree = Tree(x,5)
         cast["trees"].append(tree)
-    
-    # for y in range(850,-50,-45):
-    #     tree = Tree(4,y)
-    #     cast["trees"].append(tree)
-
-    # for y in range(850,-50,-45):
-    #     tree = Tree(48,y)
-    #     cast["trees"].append(tree)
 
     for x in range(800,650,-69):
         rock = BigRock(x,700)
@@ -121,11 +106,12 @@ def main():
     control_actors_action = ControlActorsAction(input_service)
     move_actors_action = MoveActorsAction()
     handle_collisions_action = HandleCollisionsAction()
+    handle_collections_action = HandleCollectionsAction()
     draw_actors_action = DrawActorsAction(output_service)
     
     
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action, handle_collisions_action]
+    script["update"] = [move_actors_action, handle_collisions_action,handle_collections_action]
     script["output"] = [draw_actors_action]
     
     # start the game
