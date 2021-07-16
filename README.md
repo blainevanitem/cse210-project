@@ -1,7 +1,5 @@
-# Batter
-What's your batting average? Find out with this terminal version of the arcade 
-classic. The goal is simple. Just bat the ball at the bricks until there are 
-none left. If you miss the ball the game is over.
+# Pokemon
+Can you find all of the pokeballs aroudn the map?
 
 ## Getting Started
 ---
@@ -25,7 +23,7 @@ click the "run" icon.
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- batter              (source code for game)
++-- pokemon              (source code for game)
   +-- game              (specific game classes)
   +-- __init__.py       (python package file)
   +-- __main__.py       (entry point for program)
@@ -39,4 +37,7 @@ root                    (project root folder)
 
 ## Authors
 ---
-* Brother Burton
+* - Blaine Van Item
+* - 
+* - 
+* - 
