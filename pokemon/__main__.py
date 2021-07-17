@@ -48,9 +48,6 @@ def main():
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
 
-    ball = PokeBall(80,80) #Bottom Left
-    cast["pokeballs"].append(ball)
-
     ball = PokeBall(730,650) #Top Right rocks
     cast["pokeballs"].append(ball)
     ball = PokeBall(500,420)
@@ -61,6 +58,11 @@ def main():
     # cast["pokeballs"].append(ball)
     # ball = PokeBall(80, 850)
     # cast["pokeballs"].append(ball)
+    ball = PokeBall(150,100)
+    cast["pokeballs"].append(ball)
+
+    tree = TreeHoriz(5,780)
+    cast["trees"].append(tree)
 
 
     tree = TreeHoriz(5,780)
