@@ -10,11 +10,50 @@ class Director(arcade.Window):
         self._script = script
         self._input_service = input_service
 
+        self.score = 0
+        self.fountain = cast["fountains"]
+        self.view_bottom = 0
+        self.view_left = 0
+        self.player_sprite = cast["player"][0]
+
+
     def setup(self):
         arcade.set_background_color(arcade.color.WHEAT)        
 
     def on_update(self, delta_time):
+
+        self.score = self._cue_action("update")
         self._cue_action("update")
+        for fountain in self.fountain:
+            fountain.update()
+
+        changed = False
+        
+        # Scroll up
+        top_boundary = self.view_bottom + constants.MAX_Y - constants.TOP_VIEWPORT_MARGIN
+        if self.player_sprite.top > top_boundary:
+            self.view_bottom += self.player_sprite.top - top_boundary
+            changed = True
+
+        # Scroll down
+        bottom_boundary = self.view_bottom + constants.BOTTOM_VIEWPORT_MARGIN
+        if self.player_sprite.bottom < bottom_boundary:
+            self.view_bottom -= bottom_boundary - self.player_sprite.bottom
+            changed = True
+
+        if changed:
+            # Only scroll to integers. Otherwise we end up with pixels that
+            # don't line up on the screen
+            self.view_bottom = int(self.view_bottom)
+            self.view_left = int(self.view_left)
+
+            # Do the scrolling
+            arcade.set_viewport(self.view_left,
+                                constants.MAX_X + self.view_left,
+                                self.view_bottom,
+                                constants.MAX_Y + self.view_bottom)
+        
+
 
     def on_draw(self):
         self._cue_action("output")

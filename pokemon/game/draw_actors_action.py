@@ -20,6 +20,7 @@ class DrawActorsAction(Action):
             _output_service (OutputService): An instance of OutputService.
         """
         self._output_service = output_service
+        self.texturenumber = 0
 
     def execute(self, cast):
         """Executes the action using the given actors.
@@ -31,6 +32,10 @@ class DrawActorsAction(Action):
 
         player = cast["player"][0] # there's only one
         self._output_service.draw_actor(player)
+        
+        fountains = cast["fountains"]
+        for fountain in fountains:
+            self._output_service.draw_actor(fountain)
 
         pokecenter = cast["pokecenter"]
         self._output_service.draw_actor(pokecenter)
@@ -56,13 +61,19 @@ class DrawActorsAction(Action):
         for tree in sidetrees:
             self._output_service.draw_actor(tree)
 
-        balls = cast["pokeballs"]
-        for ball in balls:
+        count = 0
+        try:
+            ball = cast["pokeballs"][count]
             self._output_service.draw_actor(ball)
             arcade.draw_text("Professor Oak thanks you for your help!", constants.MAX_X/2-250, constants.MAX_Y/2-50, arcade.color.BLUEBERRY,30)
 
-        
+        except:
+            self._output_service.clear_screen()
+            arcade.start_render()
+            arcade.draw_text("You WIN", constants.MAX_X/2, constants.MAX_Y/2, arcade.color.AIR_FORCE_BLUE)
 
+        
+        
 
 
         self._output_service.flush_buffer()
