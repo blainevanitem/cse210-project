@@ -29,48 +29,49 @@ class DrawActorsAction(Action):
             cast (dict): The game actors {key: tag, value: list}.
         """
         self._output_service.clear_screen()
-
-        player = cast["player"][0] # there's only one
-        self._output_service.draw_actor(player)
-        
-        fountains = cast["fountains"]
-        for fountain in fountains:
-            self._output_service.draw_actor(fountain)
-
-        pokecenter = cast["pokecenter"]
-        self._output_service.draw_actor(pokecenter)
-        
-
-        pokemart = cast["pokemart"]
-        self._output_service.draw_actor(pokemart)
-
-        pokelab = cast["pokelab"]
-        self._output_service.draw_actor(pokelab)
-
-        
-
-        trees = cast["trees"]
-        for tree in trees:
-            self._output_service.draw_actor(tree)
-
-        rocks = cast["bigrocks"]
-        for rock in rocks:
-            self._output_service.draw_actor(rock)
-
-        sidetrees = cast["treesides"]
-        for tree in sidetrees:
-            self._output_service.draw_actor(tree)
-
         count = 0
         try:
             ball = cast["pokeballs"][count]
             self._output_service.draw_actor(ball)
-            arcade.draw_text("Professor Oak thanks you for your help!", constants.MAX_X/2-250, constants.MAX_Y/2-50, arcade.color.BLUEBERRY,30)
+
+        
+            player = cast["player"][0] # there's only one
+            self._output_service.draw_actor(player)
+            
+            fountains = cast["fountains"]
+            for fountain in fountains:
+                self._output_service.draw_actor(fountain)
+
+            pokecenter = cast["pokecenter"]
+            self._output_service.draw_actor(pokecenter)
+            
+
+            pokemart = cast["pokemart"]
+            self._output_service.draw_actor(pokemart)
+
+            pokelab = cast["pokelab"]
+            self._output_service.draw_actor(pokelab)
+
+            
+
+            trees = cast["trees"]
+            for tree in trees:
+                self._output_service.draw_actor(tree)
+
+            rocks = cast["bigrocks"]
+            for rock in rocks:
+                self._output_service.draw_actor(rock)
+
+            sidetrees = cast["treesides"]
+            for tree in sidetrees:
+                self._output_service.draw_actor(tree)
 
         except:
             self._output_service.clear_screen()
             arcade.start_render()
             arcade.draw_text("You WIN", constants.MAX_X/2, constants.MAX_Y/2, arcade.color.AIR_FORCE_BLUE)
+            arcade.draw_text("Professor Oak thanks you for your help!", constants.MAX_X/2-250, constants.MAX_Y/2-50, arcade.color.BLUEBERRY,30)
+
 
         
         

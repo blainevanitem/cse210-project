@@ -53,14 +53,18 @@ def main():
 
     ball = PokeBall(730,650) #Top Right rocks
     cast["pokeballs"].append(ball)
-    ball = PokeBall(500,420)
+    ball = PokeBall(500,420) #behind pokemart
     cast["pokeballs"].append(ball)
-    # ball = PokeBall(100,700)
-    # cast["pokeballs"].append(ball)
-    # ball = PokeBall(700,100)
-    # cast["pokeballs"].append(ball)
-    # ball = PokeBall(80, 850)
-    # cast["pokeballs"].append(ball)
+    ball = PokeBall(95,825) #Behind Far left tree area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(745,825) #Behind Far right tree area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(340, 621) #Behind the house
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(220, 410) #Behind Pokemart
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(400,200) #Behind the fountain
+    cast["pokeballs"].append(ball)
     ball = PokeBall(150,100)
     cast["pokeballs"].append(ball)
     ball = PokeBall(150,100)
