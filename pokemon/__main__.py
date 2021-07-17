@@ -44,12 +44,9 @@ def main():
     cast["pokeballs"] = []
     cast["treesides"] = []
     cast["fountains"] = []
-<<<<<<< HEAD
-=======
 
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
->>>>>>> e504f87efe6bca97405c52758447b310fc162b00
 
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
@@ -72,14 +69,11 @@ def main():
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
 
-<<<<<<< HEAD
 
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
 
 
-=======
->>>>>>> e504f87efe6bca97405c52758447b310fc162b00
     tree = TreeHoriz(700,780)
     cast["trees"].append(tree)
     
