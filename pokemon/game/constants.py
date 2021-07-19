@@ -58,3 +58,9 @@ FOUNTAIN5 = "images/fountain5.png"
 
 BOTTOM_VIEWPORT_MARGIN = 200
 TOP_VIEWPORT_MARGIN = 200
+
+POKETOWER = "images/poketower.png"
+POKEGYM = "images/pokegym.png"
+POKEHOUSE1 = "images/pokehouse1.png"
+DEPTBUILDING = "images/bigbuilding.png"
+BIKESHOP = "images/bikeshop.png"

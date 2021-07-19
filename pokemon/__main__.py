@@ -22,6 +22,8 @@ from game.treesides import TreeSides
 from game.treehoriz import TreeHoriz
 from game.fountain import Fountain
 from game.breakable_rock import BreakRock
+from game.poketower import PokeTower
+from game.deptstore import DeptStore
 
 
 import arcade
@@ -48,10 +50,16 @@ def main():
     cast["fountains"] = []
     cast["breakrock"] = []
 
+    poketower = PokeTower()
+    cast["poketower"] = poketower
+
+    deptstore = DeptStore()
+    cast["deptstore"] = deptstore
+
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
 
-    fountain = Fountain(400,150)
+    fountain = Fountain(400,1300)
     cast["fountains"].append(fountain)
 
     ball = PokeBall(730,650) #Top Right rocks
@@ -88,22 +96,30 @@ def main():
     cast["trees"].append(tree)
 
 
-    tree = TreeHoriz(700,780)
-    cast["trees"].append(tree)
+    
+
+    lefttreeside = TreeSides(4,910)
+    cast["treesides"].append(lefttreeside)
+    lefttreeside = TreeSides(49,910)
+    cast["treesides"].append(lefttreeside)
     
     lefttreeside = TreeSides(4,400)
     cast["treesides"].append(lefttreeside)
-
     lefttreeside = TreeSides(49,400)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(814,1500)
+    cast["treesides"].append(lefttreeside)
+    lefttreeside = TreeSides(769,1500)
     cast["treesides"].append(lefttreeside)
 
     lefttreeside = TreeSides(814,92)
     cast["treesides"].append(lefttreeside)
-
     lefttreeside = TreeSides(769,92)
     cast["treesides"].append(lefttreeside)
 
-
+    tree = TreeHoriz(700,780)
+    cast["trees"].append(tree)
 
     for x in range(4,850,45):
         tree = Tree(x,40)
@@ -115,6 +131,12 @@ def main():
 
     for x in range(800,650,-69):
         rock = BigRock(x,700)
+        cast["bigrocks"].append(rock)
+    rock = BigRock(710,140)
+    cast["bigrocks"].append(rock)
+
+    for x in range(800,650,-69):
+        rock = BigRock(x,865)
         cast["bigrocks"].append(rock)
     rock = BigRock(710,140)
     cast["bigrocks"].append(rock)

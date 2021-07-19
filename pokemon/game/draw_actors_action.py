@@ -66,6 +66,12 @@ class DrawActorsAction(Action):
             for tree in sidetrees:
                 self._output_service.draw_actor(tree)
 
+            poketower = cast["poketower"]
+            self._output_service.draw_actor(poketower)
+
+            deptstore = cast["deptstore"]
+            self._output_service.draw_actor(deptstore)
+
             littlerocks = cast["breakrock"]
             try:
                 for r in littlerocks:

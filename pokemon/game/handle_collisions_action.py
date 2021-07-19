@@ -29,6 +29,8 @@ class HandleCollisionsAction(Action):
         treesides = cast["treesides"]
         rocks = cast["bigrocks"]
         fountains = cast["fountains"]
+        poketower = cast["poketower"]
+        deptstore = cast["deptstore"]
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
         if arcade.check_for_collision(player,pokecenter):
@@ -49,6 +51,52 @@ class HandleCollisionsAction(Action):
                 player.change_y = 0
 
             elif player.left < pokecenter.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+        if arcade.check_for_collision(player,deptstore):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            print(deptstore.hit_box)
+            if player.top > deptstore.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.bottom < deptstore.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > deptstore.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < deptstore.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+        if arcade.check_for_collision(player,poketower):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            
+            if player.top > poketower.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.bottom < poketower.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > poketower.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < poketower.left:
                 player.center_x -= 5
                 player.change_x = 0
                 player.change_y = 0
