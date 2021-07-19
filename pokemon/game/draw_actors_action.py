@@ -31,6 +31,7 @@ class DrawActorsAction(Action):
         self._output_service.clear_screen()
         count = 0
         try:
+            arcade.draw_text("Where are my balls!?", 320, 440, arcade.color.RED,20)
             ball = cast["pokeballs"][count]
             self._output_service.draw_actor(ball)
 

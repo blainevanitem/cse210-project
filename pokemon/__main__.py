@@ -43,6 +43,8 @@ def main():
     cast["pokemart"] = pokemart
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
+    prof = Professor()
+    cast['professor'] = prof
     
     
     cast["bigrocks"] = []
