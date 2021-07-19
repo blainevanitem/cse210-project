@@ -27,6 +27,7 @@ from game.deptstore import DeptStore
 from game.pokegym import PokeGym
 from game.bikeshop import BikeShop
 from game.pokehouse1 import PokeHouse1
+from game.professor_oak import Professor
 
 import arcade
 
