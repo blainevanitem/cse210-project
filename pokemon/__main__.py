@@ -8,6 +8,7 @@ from game.move_actors_action import MoveActorsAction
 from game.arcade_input_service import ArcadeInputService
 from game.arcade_output_service import ArcadeOutputService
 from game.score import HandleCollectionsAction
+from game.smallrocks import HandleBreaksAction
 
 from game.player import Player
 from game.pokecenter import PokeCenter
@@ -20,6 +21,7 @@ from game.pokeball import PokeBall
 from game.treesides import TreeSides
 from game.treehoriz import TreeHoriz
 from game.fountain import Fountain
+from game.breakable_rock import BreakRock
 
 
 import arcade
@@ -44,6 +46,7 @@ def main():
     cast["pokeballs"] = []
     cast["treesides"] = []
     cast["fountains"] = []
+    cast["breakrock"] = []
 
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
@@ -65,10 +68,17 @@ def main():
     cast["pokeballs"].append(ball)
     ball = PokeBall(400,200) #Behind the fountain
     cast["pokeballs"].append(ball)
-    ball = PokeBall(150,100)
+    ball = PokeBall(730,85) #Bottom Right behind small rock
     cast["pokeballs"].append(ball)
     ball = PokeBall(150,100)
     cast["pokeballs"].append(ball)
+
+    littlerock = BreakRock(655,85)
+    cast["breakrock"].append(littlerock)
+    # littlerock = BreakRock(700, 115)
+    # cast["breakrock"].append(littlerock)
+    # littlerock = BreakRock(730, 115)
+    # cast["breakrock"].append(littlerock)
 
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
@@ -106,6 +116,8 @@ def main():
     for x in range(800,650,-69):
         rock = BigRock(x,700)
         cast["bigrocks"].append(rock)
+    rock = BigRock(710,140)
+    cast["bigrocks"].append(rock)
     
     
     # create the script {key: tag, value: list}
@@ -118,11 +130,12 @@ def main():
     move_actors_action = MoveActorsAction()
     handle_collisions_action = HandleCollisionsAction()
     handle_collections_action = HandleCollectionsAction()
+    handle_breaks_action = HandleBreaksAction()
     draw_actors_action = DrawActorsAction(output_service)
     
     
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action, handle_collisions_action,handle_collections_action]
+    script["update"] = [move_actors_action, handle_collisions_action,handle_collections_action,handle_breaks_action]
     script["output"] = [draw_actors_action]
     
     # start the game

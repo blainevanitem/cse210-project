@@ -18,7 +18,7 @@ class Director(arcade.Window):
 
 
     def setup(self):
-        arcade.set_background_color(arcade.color.WHEAT)        
+        arcade.set_background_color(arcade.color.WHEAT)     
 
     def on_update(self, delta_time):
 
