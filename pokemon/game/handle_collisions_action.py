@@ -14,7 +14,7 @@ class HandleCollisionsAction(Action):
         self.is_touching = False
 
 
-    def execute(self, cast):
+    def execute(self, cast, director):
         """Executes the action using the given actors.
 
         Args:

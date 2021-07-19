@@ -1,5 +1,5 @@
 from game.action import Action
-from game import constants
+from game import constants, game_over
 
 import arcade
 
@@ -22,7 +22,7 @@ class DrawActorsAction(Action):
         self._output_service = output_service
         self.texturenumber = 0
 
-    def execute(self, cast):
+    def execute(self, cast, director):
         """Executes the action using the given actors.
 
         Args:
@@ -91,6 +91,10 @@ class DrawActorsAction(Action):
                 pass
 
         except:
+           view = game_over.GameOverView()
+           director.window.show_view(view)
+            
+
             self._output_service.clear_screen()
             arcade.start_render()
             arcade.draw_text("You WIN", constants.MAX_X/2, constants.MAX_Y/2, arcade.color.AIR_FORCE_BLUE,50)
@@ -98,8 +102,5 @@ class DrawActorsAction(Action):
 
 
         
-        
-
-
         self._output_service.flush_buffer()
 

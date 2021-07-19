@@ -20,7 +20,7 @@ class ControlActorsAction(Action):
         """
         self._input_service = input_service
 
-    def execute(self, cast):
+    def execute(self, cast, director):
         """Executes the action using the given actors.
 
         Args:

@@ -1,11 +1,14 @@
 import arcade
 from game import constants
 
-class Director(arcade.Window):
+class Director(arcade.View):
     def __init__(self, cast, script, input_service):
         """Initialize the game
         """
-        super().__init__(constants.MAX_X, constants.MAX_Y, constants.SCREEN_TITLE)
+        #super().__init__(constants.MAX_X, constants.MAX_Y, constants.SCREEN_TITLE) 
+        " The View class does not control the size of the window, so" 
+        "we’ll need to take that out of the call to the parent class"
+        super().__init__()
         self._cast = cast
         self._script = script
         self._input_service = input_service
@@ -15,6 +18,8 @@ class Director(arcade.Window):
         self.view_bottom = 0
         self.view_left = 0
         self.player_sprite = cast["player"][0]
+        self.window.set_mouse_visible(False)
+
 
 
     def setup(self):
@@ -22,7 +27,7 @@ class Director(arcade.Window):
 
     def on_update(self, delta_time):
 
-        self.score = self._cue_action("update")
+        # self.score = self._cue_action("update")
         self._cue_action("update")
         for fountain in self.fountain:
             fountain.update()
@@ -73,5 +78,5 @@ class Director(arcade.Window):
             tag (string): The given tag.
         """ 
         for action in self._script[tag]:
-            action.execute(self._cast)
+            action.execute(self._cast, self)
 
