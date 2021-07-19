@@ -16,7 +16,7 @@ class HandleCollectionsAction(Action):
         pass
 
 
-    def execute(self, cast, director):
+    def execute(self, cast):
         """Executes the action using the given actors.
 
         Args:

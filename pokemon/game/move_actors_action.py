@@ -15,7 +15,7 @@ class MoveActorsAction(Action):
         _input_service (InputService): An instance of InputService.
     """
 
-    def execute(self, cast, director):
+    def execute(self, cast):
         """Executes the action using the given actors.
 
         Args:

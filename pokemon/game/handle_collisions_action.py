@@ -14,7 +14,7 @@ class HandleCollisionsAction(Action):
         self.is_touching = False
 
 
-    def execute(self, cast, director):
+    def execute(self, cast):
         """Executes the action using the given actors.
 
         Args:
@@ -105,6 +105,7 @@ class HandleCollisionsAction(Action):
         for pokehouse1 in pokehouse1:
             if arcade.check_for_collision(player,pokehouse1):
                 arcade.play_sound(wall_hit_sound,volume=0.5)
+                print(pokehouse1.hit_box)
                 if player.top > pokehouse1.top:
                     player.center_y += 5
                     player.change_x = 0

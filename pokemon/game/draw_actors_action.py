@@ -1,5 +1,5 @@
 from game.action import Action
-from game import constants, game_over
+from game import constants
 
 import arcade
 
@@ -22,7 +22,7 @@ class DrawActorsAction(Action):
         self._output_service = output_service
         self.texturenumber = 0
 
-    def execute(self, cast, director):
+    def execute(self, cast):
         """Executes the action using the given actors.
 
         Args:
@@ -31,7 +31,6 @@ class DrawActorsAction(Action):
         self._output_service.clear_screen()
         count = 0
         try:
-            arcade.draw_text("Where are my balls!?", 320, 440, arcade.color.RED,20)
             ball = cast["pokeballs"][count]
             self._output_service.draw_actor(ball)
 
@@ -91,10 +90,6 @@ class DrawActorsAction(Action):
                 pass
 
         except:
-           view = game_over.GameOverView()
-           director.window.show_view(view)
-            
-
             self._output_service.clear_screen()
             arcade.start_render()
             arcade.draw_text("You WIN", constants.MAX_X/2, constants.MAX_Y/2, arcade.color.AIR_FORCE_BLUE,50)
@@ -102,5 +97,8 @@ class DrawActorsAction(Action):
 
 
         
+        
+
+
         self._output_service.flush_buffer()
 
