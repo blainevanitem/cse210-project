@@ -200,11 +200,9 @@ def main():
     script["output"] = [draw_actors_action]
     
     # start the game
-    
     director = Director(cast, script, input_service)
     director.setup()
 
-    
 
     starter_music = arcade.load_sound(constants.STARTER_MUSIC)
     arcade.play_sound(starter_music,looping=True, volume=0.05)

@@ -66,3 +66,7 @@ POKEHOUSE1 = "images/pokehouse1.png"
 DEPTBUILDING = "images/bigbuilding.png"
 BIKESHOP = "images/bikeshop.png"
 PROFESSOR = 'images/RBProfessor_Oak.png'
+
+POKECENTERDOOR1 = "images/pokecenterdoor1.png"
+POKECENTERDOOR2 = "images/pokecenterdoor2.png"
+POKECENTERDOOR3 = "images/pokecenterdoor3.png"
