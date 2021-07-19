@@ -6,7 +6,7 @@ MAX_Y = 800
 
 PADDLE_Y = 25
 
-PLAYER_MOVE_SCALE = 3
+PLAYER_MOVE_SCALE = 2
 
 PADDLE_IMAGE = "images/trainer_sprite.png"
 
@@ -39,6 +39,10 @@ TREE_SCALE = 1.5
 
 BIG_ROCK = "images/pokemon_rock.png"
 
+BREAK_ROCK = "images/Rock_Smashing.png"
+BREAK_ROCK_SCALE = 2
+
+
 POKEBALL = "images/pokeball.png"
 
 VIEWPORT_MARGIN = 40
@@ -55,3 +59,10 @@ PROFESSOR_OAK = "images/Professor_Oak.png"
 
 BOTTOM_VIEWPORT_MARGIN = 200
 TOP_VIEWPORT_MARGIN = 200
+
+POKETOWER = "images/poketower.png"
+POKEGYM = "images/pokegym.png"
+POKEHOUSE1 = "images/pokehouse1.png"
+DEPTBUILDING = "images/bigbuilding.png"
+BIKESHOP = "images/bikeshop.png"
+PROFESSOR = 'images/RBProfessor_Oak.png'

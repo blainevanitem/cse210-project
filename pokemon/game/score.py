@@ -25,6 +25,7 @@ class HandleCollectionsAction(Action):
 
         player = cast["player"][0]
         pokeballs = cast["pokeballs"]
+        smallrocks = cast["breakrock"]
         collection = False
         
     
