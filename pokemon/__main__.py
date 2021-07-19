@@ -59,7 +59,7 @@ def main():
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
 
-    fountain = Fountain(400,1300)
+    fountain = Fountain(400,1100)
     cast["fountains"].append(fountain)
 
     ball = PokeBall(730,650) #Top Right rocks
@@ -91,8 +91,13 @@ def main():
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
 
-
-    tree = TreeHoriz(5,780)
+    tree = TreeHoriz(183,2590)
+    cast["trees"].append(tree)
+    tree = TreeHoriz(767,2590)
+    cast["trees"].append(tree)
+    tree = TreeHoriz(183,2513)
+    cast["trees"].append(tree)
+    tree = TreeHoriz(767,2513)
     cast["trees"].append(tree)
 
 
@@ -108,6 +113,16 @@ def main():
     lefttreeside = TreeSides(49,400)
     cast["treesides"].append(lefttreeside)
 
+    lefttreeside = TreeSides(4,1420)
+    cast["treesides"].append(lefttreeside)
+    lefttreeside = TreeSides(49,1420)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(4,1930)
+    cast["treesides"].append(lefttreeside)
+    lefttreeside = TreeSides(49,1930)
+    cast["treesides"].append(lefttreeside)
+
     lefttreeside = TreeSides(814,1500)
     cast["treesides"].append(lefttreeside)
     lefttreeside = TreeSides(769,1500)
@@ -116,6 +131,11 @@ def main():
     lefttreeside = TreeSides(814,92)
     cast["treesides"].append(lefttreeside)
     lefttreeside = TreeSides(769,92)
+    cast["treesides"].append(lefttreeside)
+
+    lefttreeside = TreeSides(814,1755)
+    cast["treesides"].append(lefttreeside)
+    lefttreeside = TreeSides(769,1755)
     cast["treesides"].append(lefttreeside)
 
     tree = TreeHoriz(700,780)

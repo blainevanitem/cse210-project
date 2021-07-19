@@ -6,7 +6,7 @@ MAX_Y = 800
 
 PADDLE_Y = 25
 
-PLAYER_MOVE_SCALE = 3
+PLAYER_MOVE_SCALE = 5
 
 PADDLE_IMAGE = "images/trainer_sprite.png"
 

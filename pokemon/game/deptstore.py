@@ -15,12 +15,12 @@ class DeptStore(arcade.Sprite):
         
         self.texture = self.textures[0]
 
-        self.center_x = 600
-        self.center_y = 1500
+        self.center_x = 545
+        self.center_y = 2000
 
-        # self._hit_box_algorithm = "Simple"
-        # points = ((-56.0, -120.0), (56.0, -120.0), (56.0, -15), (20.0, -15), (-20.0, -15), (-56.0, -15))
-        # self.set_hit_box(points)
-        # self.get_adjusted_hit_box()
+        self._hit_box_algorithm = "Simple"
+        points = ((-71.0, -71.5), (-60.0, -82.5), (60.0, -82.5), (71.0, -71.5), (71.0, 50), (66.0, 50), (-66.0, 50), (-71.0, 50))
+        self.set_hit_box(points)
+        self.get_adjusted_hit_box()
 
 
