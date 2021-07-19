@@ -1,6 +1,7 @@
 import random
 from game import constants
 from game.action import Action
+from game.breakable_rock import BreakRock
 
 import arcade
 
@@ -31,6 +32,7 @@ class HandleBreaksAction(Action):
 
         #collisions
         for rock in smallrocks:
+
             # if arcade.check_for_collision(player, rock):
             #     print( f"x={player.center_x}")
             #     print( f"y={player.center_y}")
@@ -54,20 +56,42 @@ class HandleBreaksAction(Action):
             #         player.center_x -= 5
             #         player.change_x = 0
             #         player.change_y = 0
-                
+            off_screen = littlerock = BreakRock(1000,100)
+            
             if arcade.check_for_collision(player, rock) and ((player.center_x < 665 and player.center_x > 625) and (player.center_y < 120 and player.center_y > 70)):
               
                 indexer = len(smallrocks)
-                cast["breakrock"].pop(len(smallrocks) - indexer)
+                spot = 0
+                cast["breakrock"].pop(spot)
+                cast["breakrock"].insert(spot,off_screen) 
               
             
-            # if arcade.check_for_collision(player, rock) and (player.center_x < 720 and player.center_x > 670) and (player.center_y < 150 and player.center_y >100):
-            #     try:
-            #         indexer = len(smallrocks) - 1
-            #         cast["breakrock"].pop(len(smallrocks) - indexer)
-            #     except:
-            #         pass
+            if arcade.check_for_collision(player, rock) and (player.center_x < 340 and player.center_x > 310) and (player.center_y < 820 and player.center_y >750):
+                try:
+                    
+                    spot = 1
+                    cast["breakrock"].pop(spot)
+                    cast["breakrock"].insert(spot,off_screen)
+                except:
+                    pass
+            
+            if arcade.check_for_collision(player, rock) and (player.center_x < 380 and player.center_x > 320 and (player.center_y < 820 and player.center_y >750)):
+                try:
+                    
+                    spot = 2
+                    cast["breakrock"].pop(spot)
+                    cast["breakrock"].insert(spot, off_screen)
+                except:
+                    pass
 
+            if arcade.check_for_collision(player, rock) and (player.center_x < 410 and player.center_x > 360 and (player.center_y < 820 and player.center_y >750)):
+                try:
+                    
+                    spot = 3
+                    cast["breakrock"].pop(spot)
+                    cast["breakrock"].insert(spot, off_screen)
+                except:
+                    pass
                              
                 
                     
