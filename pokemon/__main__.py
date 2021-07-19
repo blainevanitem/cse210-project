@@ -75,11 +75,14 @@ def main():
 
     littlerock = BreakRock(655,85)
     cast["breakrock"].append(littlerock)
-    # littlerock = BreakRock(700, 115)
-    # cast["breakrock"].append(littlerock)
-    # littlerock = BreakRock(730, 115)
-    # cast["breakrock"].append(littlerock)
 
+    littlerock = BreakRock(315, 800)
+    cast["breakrock"].append(littlerock)
+    littlerock = BreakRock(353, 800)
+    cast["breakrock"].append(littlerock)
+    littlerock = BreakRock(390, 800)
+    cast["breakrock"].append(littlerock)
+    
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
 
