@@ -26,7 +26,6 @@ import arcade
 
 def main():
 
-    # create the cast {key: tag, value: list}
     cast = {}
 
     player = Player()
@@ -122,12 +121,18 @@ def main():
     script["output"] = [draw_actors_action]
     
     # start the game
+    window = arcade.Window(constants.MAX_X, constants.MAX_Y, constants.SCREEN_TITLE)
+    
     director = Director(cast, script, input_service)
     director.setup()
+
+    window.show_view(director)
+
     starter_music = arcade.load_sound(constants.STARTER_MUSIC)
     arcade.play_sound(starter_music,looping=True, volume=0.05)
     arcade.run()
 
+    
 
 if __name__ == "__main__":
     main()
