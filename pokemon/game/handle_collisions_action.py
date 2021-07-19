@@ -31,6 +31,9 @@ class HandleCollisionsAction(Action):
         fountains = cast["fountains"]
         poketower = cast["poketower"]
         deptstore = cast["deptstore"]
+        pokegym = cast["pokegym"]
+        bikeshop = cast["bikeshop"]
+        pokehouse1 = cast["pokehouse1"]
         wall_hit_sound = arcade.load_sound(constants.COLLISION_SOUND)
 
         if arcade.check_for_collision(player,pokecenter):
@@ -57,7 +60,6 @@ class HandleCollisionsAction(Action):
 
         if arcade.check_for_collision(player,deptstore):
             arcade.play_sound(wall_hit_sound,volume=0.5)
-            print(deptstore.hit_box)
             if player.top > deptstore.top:
                 player.center_y += 5
                 player.change_x = 0
@@ -74,6 +76,75 @@ class HandleCollisionsAction(Action):
                 player.change_y = 0
 
             elif player.left < deptstore.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+        if arcade.check_for_collision(player,bikeshop):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            
+            if player.top > bikeshop.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.bottom < bikeshop.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > bikeshop.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < bikeshop.left:
+                player.center_x -= 5
+                player.change_x = 0
+                player.change_y = 0
+        for pokehouse1 in pokehouse1:
+            if arcade.check_for_collision(player,pokehouse1):
+                arcade.play_sound(wall_hit_sound,volume=0.5)
+                print(pokehouse1.hit_box)
+                if player.top > pokehouse1.top:
+                    player.center_y += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.bottom < pokehouse1.bottom:
+                    player.center_y -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.right > pokehouse1.right:
+                    player.center_x += 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+                elif player.left < pokehouse1.left:
+                    player.center_x -= 5
+                    player.change_x = 0
+                    player.change_y = 0
+
+        if arcade.check_for_collision(player,pokegym):
+            arcade.play_sound(wall_hit_sound,volume=0.5)
+            
+            if player.top > pokegym.top:
+                player.center_y += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.bottom < pokegym.bottom:
+                player.center_y -= 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.right > pokegym.right:
+                player.center_x += 5
+                player.change_x = 0
+                player.change_y = 0
+
+            elif player.left < pokegym.left:
                 player.center_x -= 5
                 player.change_x = 0
                 player.change_y = 0

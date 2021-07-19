@@ -3,23 +3,23 @@ from game import constants
 
 import arcade
 
-class PokeTower(arcade.Sprite):
+class BikeShop(arcade.Sprite):
     def __init__(self):
         super().__init__()
 
         self.scale = constants.BUILDING_SCALING
         self.textures = []
 
-        texture = arcade.load_texture(constants.POKETOWER)
+        texture = arcade.load_texture(constants.BIKESHOP)
         self.textures.append(texture)
         
         self.texture = self.textures[0]
 
-        self.center_x = 200
-        self.center_y = 1500
+        self.center_x = 600
+        self.center_y = 1300
 
         self._hit_box_algorithm = "Simple"
-        points = ((-56.0, -120.0), (56.0, -120.0), (56.0, -15), (20.0, -15), (-20.0, -15), (-56.0, -15))
+        points = ((-32.0, -41.0), (-27.0, -46.0), (27.0, -46.0), (32.0, -41.0), (32.0, 38), (28.0, 38), (-28.0, 38), (-32.0, 38))
         self.set_hit_box(points)
         self.get_adjusted_hit_box()
 

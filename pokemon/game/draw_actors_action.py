@@ -72,6 +72,16 @@ class DrawActorsAction(Action):
             deptstore = cast["deptstore"]
             self._output_service.draw_actor(deptstore)
 
+            pokegym = cast["pokegym"]
+            self._output_service.draw_actor(pokegym)
+
+            bikeshop = cast["bikeshop"]
+            self._output_service.draw_actor(bikeshop)
+
+            pokehouse1 = cast["pokehouse1"]
+            for house in pokehouse1:
+                self._output_service.draw_actor(house)
+
             littlerocks = cast["breakrock"]
             try:
                 for r in littlerocks:

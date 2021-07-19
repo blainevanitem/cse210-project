@@ -15,7 +15,7 @@ class PokeTower(arcade.Sprite):
         
         self.texture = self.textures[0]
 
-        self.center_x = 200
+        self.center_x = 220
         self.center_y = 1500
 
         self._hit_box_algorithm = "Simple"

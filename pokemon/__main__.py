@@ -24,7 +24,9 @@ from game.fountain import Fountain
 from game.breakable_rock import BreakRock
 from game.poketower import PokeTower
 from game.deptstore import DeptStore
-
+from game.pokegym import PokeGym
+from game.bikeshop import BikeShop
+from game.pokehouse1 import PokeHouse1
 
 import arcade
 
@@ -49,9 +51,21 @@ def main():
     cast["treesides"] = []
     cast["fountains"] = []
     cast["breakrock"] = []
+    cast["pokehouse1"] = []
+
+    pokehouse = PokeHouse1(525,980)
+    cast["pokehouse1"].append(pokehouse)
+    pokehouse = PokeHouse1(660,980)
+    cast["pokehouse1"].append(pokehouse)
+
+    bikeshop = BikeShop()
+    cast["bikeshop"] = bikeshop
 
     poketower = PokeTower()
     cast["poketower"] = poketower
+
+    pokegym = PokeGym()
+    cast["pokegym"] = pokegym
 
     deptstore = DeptStore()
     cast["deptstore"] = deptstore
@@ -59,7 +73,7 @@ def main():
     fountain = Fountain(400,150)
     cast["fountains"].append(fountain)
 
-    fountain = Fountain(400,1100)
+    fountain = Fountain(430,1180)
     cast["fountains"].append(fountain)
 
     ball = PokeBall(730,650) #Top Right rocks
@@ -94,13 +108,13 @@ def main():
     tree = TreeHoriz(5,780)
     cast["trees"].append(tree)
 
-    tree = TreeHoriz(183,2590)
+    tree = TreeHoriz(183,2290)
     cast["trees"].append(tree)
-    tree = TreeHoriz(767,2590)
+    tree = TreeHoriz(767,2290)
     cast["trees"].append(tree)
-    tree = TreeHoriz(183,2513)
+    tree = TreeHoriz(183,2213)
     cast["trees"].append(tree)
-    tree = TreeHoriz(767,2513)
+    tree = TreeHoriz(767,2213)
     cast["trees"].append(tree)
 
 
@@ -131,9 +145,9 @@ def main():
     lefttreeside = TreeSides(769,1500)
     cast["treesides"].append(lefttreeside)
 
-    lefttreeside = TreeSides(814,92)
+    lefttreeside = TreeSides(814,80)
     cast["treesides"].append(lefttreeside)
-    lefttreeside = TreeSides(769,92)
+    lefttreeside = TreeSides(769,80)
     cast["treesides"].append(lefttreeside)
 
     lefttreeside = TreeSides(814,1755)
@@ -158,11 +172,11 @@ def main():
     rock = BigRock(710,140)
     cast["bigrocks"].append(rock)
 
-    for x in range(800,650,-69):
-        rock = BigRock(x,865)
-        cast["bigrocks"].append(rock)
-    rock = BigRock(710,140)
-    cast["bigrocks"].append(rock)
+    # for x in range(800,650,-69):
+    #     rock = BigRock(x,860)
+    #     cast["bigrocks"].append(rock)
+    # rock = BigRock(710,140)
+    # cast["bigrocks"].append(rock)
     
     
     # create the script {key: tag, value: list}
