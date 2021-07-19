@@ -24,6 +24,7 @@ from game.fountain import Fountain
 from game.breakable_rock import BreakRock
 from game.poketower import PokeTower
 from game.deptstore import DeptStore
+from game.professor_oak import Professor
 
 
 import arcade
@@ -41,6 +42,8 @@ def main():
     cast["pokemart"] = pokemart
     pokelab = PokeLab()
     cast["pokelab"] = pokelab
+    prof = Professor()
+    cast['professor'] = prof
     
     
     cast["bigrocks"] = []
