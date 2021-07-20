@@ -6,7 +6,7 @@ MAX_Y = 800
 
 PADDLE_Y = 25
 
-PLAYER_MOVE_SCALE = 2
+PLAYER_MOVE_SCALE = 2.5
 
 PADDLE_IMAGE = "images/trainer_sprite.png"
 
@@ -55,6 +55,7 @@ FOUNTAIN2 = "images/fountain2.png"
 FOUNTAIN3 = "images/fountain3.png"
 FOUNTAIN4 = "images/fountain4.png"
 FOUNTAIN5 = "images/fountain5.png"
+PROFESSOR_OAK = "images/Professor_Oak.png"
 
 BOTTOM_VIEWPORT_MARGIN = 200
 TOP_VIEWPORT_MARGIN = 200
@@ -65,3 +66,7 @@ POKEHOUSE1 = "images/pokehouse1.png"
 DEPTBUILDING = "images/bigbuilding.png"
 BIKESHOP = "images/bikeshop.png"
 PROFESSOR = 'images/RBProfessor_Oak.png'
+
+POKECENTERDOOR1 = "images/pokecenterdoor1.png"
+POKECENTERDOOR2 = "images/pokecenterdoor2.png"
+POKECENTERDOOR3 = "images/pokecenterdoor3.png"

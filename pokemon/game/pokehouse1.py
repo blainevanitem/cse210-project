@@ -18,9 +18,9 @@ class PokeHouse1(arcade.Sprite):
         self.center_x = x
         self.center_y = y
 
-        self._hit_box_algorithm = "Simple"
-        points = ((-32.0, -36.0), (32.0, -36.0), (32.0, 30), (31.0, 30), (-31.0, 30), (-32.0, 30))
-        self.set_hit_box(points)
-        self.get_adjusted_hit_box()
+        # self._hit_box_algorithm = "Simple"
+        # points = ((-56.0, -120.0), (56.0, -120.0), (56.0, -15), (20.0, -15), (-20.0, -15), (-56.0, -15))
+        # self.set_hit_box(points)
+        # self.get_adjusted_hit_box()
 
 

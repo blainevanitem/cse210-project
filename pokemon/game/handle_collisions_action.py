@@ -44,6 +44,9 @@ class HandleCollisionsAction(Action):
                 player.change_y = 0
 
             elif player.bottom < pokecenter.bottom:
+                if player.center_x <= pokecenter.center_x+10 or player.center_x >= pokecenter.center_x-10:
+                    pokecenter.execute()
+                
                 player.center_y -= 5
                 player.change_x = 0
                 player.change_y = 0
