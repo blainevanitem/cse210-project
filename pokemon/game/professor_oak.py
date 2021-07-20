@@ -7,7 +7,7 @@ class Professor(arcade.Sprite):
     def __init__(self):
         super().__init__()
 
-        self.scale = .8
+        self.scale = 1
         self.textures = []
 
         texture = arcade.load_texture(constants.PROFESSOR)

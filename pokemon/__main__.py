@@ -78,25 +78,35 @@ def main():
 
     fountain = Fountain(430,1180)
     cast["fountains"].append(fountain)
-
-    ball = PokeBall(730,650) #Top Right rocks
-    cast["pokeballs"].append(ball)
-    ball = PokeBall(500,420) #behind pokemart
-    cast["pokeballs"].append(ball)
-    ball = PokeBall(95,825) #Behind Far left tree area 2
-    cast["pokeballs"].append(ball)
-    ball = PokeBall(745,825) #Behind Far right tree area 2
-    cast["pokeballs"].append(ball)
-    ball = PokeBall(340, 621) #Behind the house
-    cast["pokeballs"].append(ball)
-    ball = PokeBall(220, 410) #Behind Pokemart
-    cast["pokeballs"].append(ball)
+    
     ball = PokeBall(400,200) #Behind the fountain
     cast["pokeballs"].append(ball)
     ball = PokeBall(730,85) #Bottom Right behind small rock
     cast["pokeballs"].append(ball)
-    ball = PokeBall(150,100)
+    ball = PokeBall(500,420) #behind pokemart
     cast["pokeballs"].append(ball)
+    ball = PokeBall(340, 621) #Behind the house
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(95,825) #Behind Far left tree area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(700,825) #Behind Far right tree area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(725,1050) #Behind hotels area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(430,1240) #Behind fountain area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(95,1500) #Behind skyscraper area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(535,1820) #In front of mall area 2
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(730,650) #Top Right rocks
+    cast["pokeballs"].append(ball)
+    ball = PokeBall(220, 410) #Behind Pokemart
+    cast["pokeballs"].append(ball)
+
+    # random.shuffle(cast["pokeballs"]) #Breaks game, too long to find all
+    # ball = PokeBall(150,100)
+    # cast["pokeballs"].append(ball)
 
     littlerock = BreakRock(655,85)
     cast["breakrock"].append(littlerock)
@@ -173,6 +183,8 @@ def main():
         rock = BigRock(x,700)
         cast["bigrocks"].append(rock)
     rock = BigRock(710,140)
+    cast["bigrocks"].append(rock)
+    rock = BigRock(770,863)
     cast["bigrocks"].append(rock)
 
     # for x in range(800,650,-69):
